@@ -1,0 +1,927 @@
+*,*::after,*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header
+{
+    height: 130px;
+}
+
+
+.header-container
+{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+
+}
+.header-logo
+{
+    width: 15%;
+    font-size: 46px;
+    text-align: center;
+    margin-top: -10px;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;}
+.header-logo span
+{
+    background: linear-gradient(rgb(198, 197, 197) , rgb(0, 0, 0) ); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
+
+}
+/* .line-through1
+{
+    width:120px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    left: 5px;
+}
+.line-through2
+{
+    width:50px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    left:163px;
+} */
+.header-logo b
+{
+    -webkit-text-fill-color: rgb(142, 1, 142);
+}
+
+.header-categories
+{
+    width: 60%;
+    margin-top: 14px;
+    
+}
+.header-categories li
+{
+    display: inline-block;
+    width: 100px;
+    font-size: 23px;
+    color: rgb(99, 99, 99);
+    border-left: 1px solid rgb(185, 185, 185);
+    line-height: 10px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    position: relative;
+
+
+}
+.header-actions
+{
+    display: flex;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+.header-actions i
+{
+    font-size:30px ;
+    margin-left: 30px;
+    color: rgb(76, 76, 76);
+    
+}
+.header-cations-cart
+{
+    width: 200px;
+    position: relative;
+}
+.incart
+{
+    width: 17px;
+    height:17px;
+    position: absolute;
+    top: 15px;
+    left: 65px;
+    border-radius: 50%;
+    background-color: rgb(137, 0, 137);
+    color: white;
+    text-align: center;
+}
+
+.header-first-li
+{
+    margin-left: 130px; 
+    padding-right: 120px; 
+    border-left: 0px;
+    padding-left: 30px;
+}
+
+.header-categories li::after
+{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 30px;
+    top:-10px;
+    left: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    /* transform:scaleX(0); */
+    transition:  0.4s ;
+    
+}
+.header-categories li::before
+{
+    content: "";
+    position: absolute;
+    width: 104%;
+    height: 30px;
+    top:-10px;
+    left: 0;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    transform: scaleY(0);
+    transition: transform 0.4s ;
+    
+}
+.header-categories li:hover:after
+{
+    transition-delay: 0.4s;
+    transform: scaleX(1);
+    width: 104%;
+
+}
+.header-categories li:hover:before
+{
+    transform: scaleY(1);
+
+}
+
+.header-onhover-div
+{
+    position: absolute;
+    width:450px;
+    height: 150px;
+    top: 90px;
+    left:360px;
+    background-color: rgb(251, 251, 251);
+    border: 1px solid black;
+    z-index: 10;
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+    transition:transform 1s , opacity 1.2s ,visibilty 0.5s;
+}
+
+.first-a-inheader:hover .header-onhover-div
+{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+/* .header-onhover-div:hover
+{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+} */
+.header-onhover-div table
+{   
+    
+    margin: auto;
+    
+
+ 
+}
+.header-onhover-div table th
+{   
+    font-size: 19px;
+    padding: 10px 35px ;
+    color:black;
+    text-decoration: underline dotted;
+    text-underline-offset: 10px;
+ 
+}
+.header-onhover-div table td
+{   
+    padding: 0px 35px ;
+    font-size: 18px;
+    color: rgb(72, 72, 72);
+ 
+}
+
+/* //////////////////////////////////////////////////////////// header //////////////////////////////////////////////////////////// */
+
+
+main
+{
+    height: 811px;
+    width: 80%;
+    margin:auto;
+}
+.banner-conatiner
+{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+}
+.banner-span
+{
+    width: 600px;
+    height: 400px;
+    margin: 200px 50px ;
+    font-size: 100px;
+    /* font-family: 'Abril Fatface', serif; */
+    font-family: 'GFS Didot', serif;
+    flex-shrink: 10;
+}
+.banner-img-overlay
+{
+    width: 600px;
+    height: 100%;
+    margin-right: 80px ;
+    background-image: url(..//images/bannerchair.jpg);
+    background-size:cover;
+    position: relative;
+    flex-shrink: 1;
+
+}
+.banner-img-window
+{
+    width: 430px;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    margin-left: 70px;
+    transform: skewX(10deg);
+}
+.remove-img1
+{
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    transform: skewX(10deg);
+    margin-left: -129px;
+}
+.remove-img2
+{
+    width: 200px;
+    height: 100%;
+    background-color: white;
+    transform: skewX(10deg);
+    position: absolute;
+    margin-left: 500px;
+}
+
+.banner-span button
+{
+    margin-left: 10px;
+    width:230px;
+    height: 50px;
+    border: 0px;
+    background-color: black;
+    color: rgb(204, 204, 204);
+    font-size: 17px;
+    position: relative;
+}
+.banner-span-buttonlien
+{
+    width: 40px;
+    height: 1px;
+    background-color: rgb(204, 204, 204);
+    display: inline-block;
+    position: absolute;
+    left: 140px;
+    top: 25px;
+
+}
+.banner-bulb
+{
+    position: absolute;
+    top: 0;
+    left: 600px;
+    z-index: 5;
+    flex-shrink: 1;
+
+}
+
+
+
+
+
+
+
+/* ////////////////////main////////////////////////////////////// */
+
+
+
+
+
+
+
+.specialProducts
+{
+    width: 100%;
+    height: 600px;
+    padding-top: 40px;
+}
+.specialProducts-container
+{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    
+}
+.specialProducts-caption
+{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.specialProducts-caption span
+{
+    font-size: 36px;
+    line-height: 46px;
+    font-family: 'Playfair Display', serif;
+
+    
+}
+.specialProducts-caption-underline
+{
+    width: 70px;
+    height: 2px;
+    background-color: rgb(142, 1, 142);
+    margin: auto;
+    transition: 1s;
+}
+
+.specialProducts-caption span:hover +.specialProducts-caption-underline
+{
+    transform: scaleX(1.6);
+}
+
+
+.specialProducts-content
+{
+    margin-top: 5px;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.bestseller
+{
+    height: 100%;
+    flex-basis: 450px;
+
+}
+.bestseller-img
+{   
+    width: 100%;
+    height: 45  0px;
+
+}
+.bestseller-description
+{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.bestseller-description-first
+{
+    font-size: 18px;
+    color: rgb(155, 155, 155);
+}
+.bestseller-description-second
+{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.bestseller-description-animation
+{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    background-color: white;
+    display: inline-block;
+    margin-left: 15px;
+    transform: translateZ(0deg);
+    border-radius: 0px;
+    /* visibility: hidden; */
+    animation-name: description;
+    animation-duration: 2s;
+    animation-play-state: paused;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: 0.3s;
+
+}
+
+
+@keyframes description
+{
+    0%
+    {
+        width: 50px;
+        height: 50px;
+        transform: rotate(0);
+        border-radius: 0px;
+        top:0px;
+        background-color: white;
+        color: black;
+
+       
+    }
+    25% {
+        transform: scale(0.8);
+        color: white;
+        
+
+    }
+    50%
+    {
+        transform: rotate(180deg);
+        border-radius: 50%;
+        color:rgba(255, 0, 0, 0.748);
+        background-color: black;
+        border: 0px;
+        
+
+    }
+    75% {
+        transform: scale(0.9);
+
+        color: white;
+
+        
+    }
+    100%
+    {
+        border-radius: 0%;
+        transform: rotate(360deg);
+
+        color: black;
+        
+
+
+        
+
+    }
+
+}
+
+
+.bestseller:hover .bestseller-description .bestseller-description-animation
+{
+    animation-play-state: running;
+    opacity: 1;
+}
+
+/* ///////////////////////////////////////// sec 2////////////////////////////////////// */
+.offers
+{
+    width: 100%;
+    height: 600px;
+}
+.offers-container
+{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.offers-content-handle
+{
+    width: 100%;
+    flex-grow:3 ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.offers-icons-handle
+{
+    width: 95%;
+    flex-grow: 1;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.offers-content-describtion
+{
+    flex-grow:1.8;
+    margin-right: 20px;
+    margin-left: 35px;
+}
+.offers-content-discount
+{
+    flex-grow:1;
+    margin-right: 20px;
+
+}
+.offers-content-discount-img,.offers-content-describtion-span
+{
+    height: 80%;
+    width: 100%;
+    margin-top: 10%;
+    transition: 0.5s;
+}
+.offers-content-discount .img1
+{
+    background-image:url(..//images/B&W.webp);
+    background-size: cover  ;
+}
+.offers-content-discount .img2
+{
+    background-image:url(..//images/undefined.webp);
+    background-size: cover  ;
+
+}
+.offers-content-discount-img:hover
+{
+    transform: scale(1.1);
+}
+.offers-content-describtion-span
+{
+    margin-top: 5%;
+}
+
+.offers-content-describtion-span .quote-sender
+{
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+.offers-content-describtion-span .massage
+{
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+.quote-sender i{
+    font-size: 70px;
+    color: black;
+    transform: skew(-15deg);
+}
+.sp1
+{
+    font-size:25px;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    position: absolute;
+    top: 20px;
+    left:80px;
+
+}
+.sp2
+{
+    font-size: 20px;
+    color: rgb(148, 148, 148);
+    position: absolute;
+    top: 45px;
+    left:80px;
+}
+
+.massage-span
+{
+    position: absolute;
+    top: 50px;
+    left:80px;
+    font-size: 30px;
+    color: rgb(62, 62, 62);
+    font-family: 'Great Vibes', cursive;
+    text-transform: capitalize;
+    display: flex;
+    
+}
+.massage i{
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+    font-size: 70px;
+    color: black;
+    transform: skew(-15deg);
+}
+.offers-content-describtion-lines
+{
+    width: 60px;
+    height: 1px;
+    background-color: black;
+    margin-right: 20px;
+    margin-top: -20px;
+}
+.offers-icons
+{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    transition:  0.4s ;
+}
+.offers-icons-img
+{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    margin: 20px auto;
+    background-size: cover;
+   
+}
+.rightborder
+{
+    border-right: 1px solid rgb(185, 185, 185);
+}
+.offers-icons span
+{
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+}
+.offers-icons .sp
+{
+    color: rgb(167, 167, 167);
+    text-transform: lowercase;
+}
+
+
+.offers-icons-line
+{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(185, 185, 185);
+    position: absolute;
+    top: 200px;
+    left: 0;
+}
+.offer-icon1,.offer-icon2,.offer-icon3,.offer-icon4,.offer-icon5
+{
+    background-repeat: no-repeat;
+    transition:  0.5s ease-in-out;
+}
+
+.offer-icon1
+{
+    background-image: url(../images/bulbcombined.png);
+    
+}
+.offer-icon2
+{
+    background-image: url(../images/truckcombined.png);
+    background-position: -60px 0px;
+}
+.offer-icon3
+{
+    background-image: url(../images/money\ combined.png);
+    background-position: 0px -60px;
+}
+.offer-icon4
+{
+    background-image: url(../images/shield.png);
+}
+.offer-icon5
+{
+    background-image: url(../images/snapcpmbined.png);
+    transition: 0.3s ease-in;
+
+}
+.offers-icons:nth-child(1):hover .offer-icon1
+{
+    background-position: 0px -60px;
+}
+.offers-icons:nth-child(2):hover .offer-icon2
+{
+    background-position: 0px 0px;
+}
+.offers-icons:nth-child(3):hover .offer-icon3
+{
+    background-position: 0px 0px;
+}
+.offers-icons:nth-child(4):hover .offer-icon4
+{
+    background-image: url(../images/handshake.png);
+}
+.offers-icons:nth-child(5):hover .offer-icon5
+{
+    background-image: url(../images/convenient.png);
+}
+
+
+
+
+/* /////////////////////////////////sec3//////////////////////////// */
+
+.featuredproducts
+{
+    width: 100%;
+    height: 1500px;
+    margin-top: 100px;
+    padding-top: 5%;
+    box-sizing: border-box;
+}
+.featuredproducts-container
+{
+    width: 80%;
+    height: 95%;
+    margin: auto;
+    
+}
+
+.featuredproducts-caption-handle
+{
+    width: 100%;
+    height: 150px;
+}
+.featuredproducts-caption
+{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+
+.featuredproducts-caption span
+{
+    font-size: 36px;
+    line-height: 46px;
+    font-family: 'Playfair Display', serif;
+
+}
+.featuredproducts-caption-underline
+{
+    width: 150px;
+    height: 2px;
+    background-color: rgb(142, 1, 142);
+    margin: auto;
+    margin-top: 5px;
+    transition: 1s;
+}
+.featuredproducts-caption span:hover +.featuredproducts-caption-underline
+{
+    transform: scaleX(1.4);
+}
+.featuredproducts-caption-classes
+{
+    width: 100%;
+    height: 70px;
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.featuredproducts-caption-classes li
+{
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 16px;
+    color: rgb(99, 99, 99);
+    font-family: 'Playfair Display', serif;
+
+}
+.featuredproducts-content-handle
+{
+    width: 100%;
+    height: 89%;
+    display: grid;
+    grid-template-columns: repeat(3,450px);
+    justify-content: space-between;
+    row-gap: 10px;
+}
+.featureditem-img{
+    width: 100%;
+    height: 80%;
+    background-image: url(../images/chair1.jpg);
+    background-size: cover;
+    position: relative;
+}
+.featureditem-description
+{
+    width: 100%;
+    height: 120px;
+}
+.featureditem-description-icon
+{
+    padding: 20px 0px 3px 0px;
+    font-size: 16px;
+    color: rgba(240,189,55,255);
+   
+}
+
+
+
+.featureditem-img1
+{
+    background-image: url(..//images/mark_1493435710_u82.jpg);
+}
+.featureditem-img2
+{
+    background-image: url(..//images/mark_1495101340_13n.jpg);
+}
+.featureditem-img3
+{
+    background-image: url(..//images/mark_1493436515_5t3.jpg);
+}
+.featureditem-img4
+{
+    background-image: url(..//images/mark_1494645784_5c8.jpg);
+}
+.featureditem-img5
+{
+    background-image: url(..//images/mark_1493435725_p21.jpg );
+}
+.featureditem-img6
+{
+    background-image: url(..//images/modern-black-white-living-room-red-accent-floor-lamp-black-couches-coffee-table-frames-open-upstairs-area-tv-roses.jpg);
+}
+
+
+
+.sp100
+{
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+.sp101
+{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+.featureditem-img-overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    background-color: white;
+    opacity: 0;
+    transition: all 0.4s;
+    
+    
+
+}
+.featureditem-img:hover .featureditem-img-overlay
+{
+    transform: scaleX(1);
+    opacity: 0.8;
+}
+.featureditem-img-overlay ul
+{
+    position: absolute;
+    top: 370px;
+    left: 140px;
+}
+.featureditem-img-overlay li
+{
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 20px;
+    color: black;
+    opacity: 1;
+    
+}
+
+
+
+/* Heading Font: A bold and eye-catching font for headings and titles.
+
+Playfair Display: This serif font exudes elegance and works well for headings.
+Body Font: A clean and easy-to-read font for your website's content.
+
+Lato: Lato is a modern sans-serif font that offers a clean and professional look while maintaining readability.
+Accent Font: A unique and stylish font for special elements or call-to-action buttons.
+
+Poppins: Poppins is a versatile sans-serif font that can be used to add a touch of modern style to your website.
+Script Font (Optional): For decorative elements or quotes, consider a stylish script font.
+
+Great Vibes: This elegant script font can add a touch of sophistication to specific sections of your website.
+Fallback Font: Always include a web-safe fallback font in your font stack, such as Arial or Helvetica, to ensure readability in case a user's browser doesn't support your primary font choices. */
